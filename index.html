@@ -50,7 +50,7 @@
         <span>Введите степень</span>
         <input type="number" id="step">
         <br>
-        <button id="stepen" onclick="stepen()">Возвести в степень</button>
+        <button id="stepen" onclick="stepen();">Возвести в степень</button>
         <br>
         <span id="otvet">Ответ:</span>
         <br>
@@ -62,13 +62,22 @@
         <span>Введите второе число</span>
         <input type="number" id="chislo2">
         <br>
-        <button id="stepen" onclick="stepen()">Сложить</button>
+        <button id="stepen" onclick="sum();">Сложить</button>
         <br>
-        <span id="otvet">Ответ:</span>
+        <span id="otvet1">Ответ:</span>
     </div>
 </body>
 <script type="text/javascript">
+
+
+
+
+
     function stepen(){
-    }
+        var ch1 =document.getElementById('chislo').value;
+        var ch2 =document.getElementById('step').value;
+        var res = Math.pow(Number(ch1),Number(ch2));
+        document.getElementById('otvet').innerHTML="Ответ: "+String(res);
+    };
 </script>
 </html>
